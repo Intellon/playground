@@ -1,0 +1,19 @@
+{
+  "date": "Fri, 03 Sep 2021 13:38:04 GMT",
+  "server": "Apache",
+  "x-oneagent-js-injection": "true",
+  "vary": "X-Forwarded-Proto,Accept-Encoding",
+  "frame-options": "SAMEORIGIN",
+  "content-encoding": "gzip",
+  "x-frame-options": "DENY",
+  "permissions-policy": "interest-cohort=()",
+  "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+  "last-modified": "Fri, 03 Sep 2021 13:13:08 GMT",
+  "content-security-policy": "block-all-mixed-content ; connect-src   'self'   api.raiffeisen.ch   boerse.raiffeisen.ch   login.raiffeisen.ch   microsites.raiffeisen.ch   statistics.raiffeisen.ch   chat.aiaibot.com   api.aiaibot.com   export.highcharts.com   scene7.raiffeisen.ch   collect-eu-central-1.tealiumiq.com   dpm.demdex.net   raiffeisen.tt.omtrdc.net ; default-src   'self'   resource: ; font-src   'self'   fonts.googleapis.com   fonts.gstatic.com ; frame-ancestors   experience.adobe.com   chat.aiaibot.com   chat-pr823.aiaibot.dev   raiffeisen.experiencecloud.adobe.com ; frame-src * ; img-src   'self'   data:   statistics.raiffeisen.ch   www.google.ch   www.facebook.com   www.google.com   khms0.googleapis.com   khms1.googleapis.com   maps.googleapis.com   csi.gstatic.com   maps.gstatic.com   export.highcharts.com   scene7.raiffeisen.ch   dmp.adform.net   dpm.demdex.net   raiffeisen.demdex.net   googleads.g.doubleclick.net   media10.simplex.tv ; media-src   'self'   blob:   ruz.ch   www.ruz.ch   scene7.raiffeisen.ch   media10.simplex.tv ; report-uri https://api.rreports.ch/svreport/v1/api/wwwrch/csp ; script-src   'self'   'unsafe-eval'   'unsafe-inline'   login.raiffeisen.ch   microsites.raiffeisen.ch   activitymap.adobe.com   www.googleadservices.com   maps.googleapis.com   scene7.raiffeisen.ch   chat.aiaibot.com   chat-pr823.aiaibot.dev   googleads.g.doubleclick.net   cdn.tt.omtrdc.net ; style-src   'self'   'unsafe-inline'   microsites.raiffeisen.ch   fonts.googleapis.com   scene7.raiffeisen.ch   cdn.tt.omtrdc.net ;",
+  "x-content-type-options": "nosniff",
+  "x-xss-protection": "1; mode=block",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "content-security-policy-report-only": "base-uri   'self'; child-src   'self'   blob: ; manifest-src   'self'; object-src   'self'; form-action   'self'; frame-src   microsites.raiffeisen.ch   video.service.raiffeisen.ch   activitymap.adobe.com   chat.aiaibot.com   authorize.omniture.com   sitecatalyst.omniture.com   cdn.tt.omtrdc.net   media10.simplex.tv   nubes.simplex.tv ; report-uri https://api.rreports.ch/svreport/v1/api/wwwrch/csp ; worker-src   'self';",
+  "content-type": "text/html;charset=utf-8",
+  "accept-ranges": "bytes"
+}
