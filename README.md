@@ -9,6 +9,7 @@ The project is organized into the following directories:
     - `main`: Primary directory for Java projects.
         - `java`: All Java source files are located within this directory.
             - `codesnippets`: This directory is a treasure trove of smaller, concise examples of Java functionalities.
+                - `ChromeProcess`: Demonstrates finding and monitoring Chrome processes to detect changes.
                 - `MailClient`: Demonstrates how to implement a simple mail client.
                 - `MavenEnvHandler`: An example to handle Maven environment configurations.
                 - `RestHandler`: Showcases a basic RESTful service handler.
