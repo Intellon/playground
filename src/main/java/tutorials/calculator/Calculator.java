@@ -1,7 +1,7 @@
 package tutorials.calculator;
 
 /**
- * @author UEX13061
+ * @author Intellon
  * @date 22.03.2024
  */
 public class Calculator {

@@ -3,7 +3,7 @@ package tutorials.calculator;
 import java.util.Scanner;
 
 /**
- * @author UEX13061
+ * @author Intellon
  * @date 22.03.2024
  *
  * Erstellung eines einfachen Taschenrechnerprogramms in Java.
