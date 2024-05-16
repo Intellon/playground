@@ -9,7 +9,9 @@ The project is organized into the following directories:
     - `main`: Primary directory for Java projects.
         - `java`: All Java source files are located within this directory.
             - `codesnippets`: This directory is a treasure trove of smaller, concise examples of Java functionalities.
-                - `ChromeProcess`: Demonstrates finding and monitoring Chrome processes to detect changes.
+                - `ChromeProcessHandlerWindows`: Demonstrates handling Chrome processes specifically on Windows.
+                - `ChromeProcessScannerWindows`: Scans for Chrome processes on Windows.
+                - `CrossBrowserProcessHandlerSimple`: Simple cross-browser process handling example.
                 - `MailClient`: Demonstrates how to implement a simple mail client.
                 - `MavenEnvHandler`: An example to handle Maven environment configurations.
                 - `RestHandler`: Showcases a basic RESTful service handler.
@@ -22,17 +24,16 @@ The project is organized into the following directories:
                 - `filelauncher`: Example showing how to launch external files and applications from Java.
                 - `greeter`: A basic program to greet users, showcasing command line interaction.
                 - `loadgeneratoripconfigurator`: Tools to generate load for testing and configuring IP settings.
+                - `processhandling`: Demonstrates handling of different processes.
                 - `StartBinaryBanner`: A program to display banners in binary format.
                 - `StartInterestsRates`: A simple interest rate calculator.
                 - `StartSquares`: Demonstrates mathematical functions to calculate squares of numbers.
                 - `StartWhatsYourNumber`: Interactive game to guess numbers.
         - `resources`: Assets and additional non-code files used in projects.
-            - `games`: Sub-directory for game-specific resources.
-                - `minesweeper`: Visual assets and other resources for the Minesweeper game.
-                - `panzergame`: Assets and resources used in the tank game.
-            - `tutorial`: Additional resources for tutorial projects.
-                - `filelauncher.batch`: A batch script used within file launcher tutorials.
-                - `filelauncher.logs`: Log files demonstrating logging capabilities within Java applications.
+            - `games.minesweeper`: Visual assets and other resources for the Minesweeper game.
+            - `games.panzergame.images`: Assets and resources used in the tank game.
+            - `tutorial.filelauncher.batch`: A batch script used within file launcher tutorials.
+            - `tutorial.filelauncher.logs`: Log files demonstrating logging capabilities within Java applications.
 
 ## Usage
 
