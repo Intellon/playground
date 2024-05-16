@@ -29,7 +29,7 @@ public class ProcessHandler {
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.contains("chrome") && (line.contains("--headless") || line.contains("--disable-gpu") || line.contains("--remote-debugging-port"))) {
+                if (line.contains("chrome") && (line.contains("--headless") || line.contains("--disable-gpu") || line.contains("--remote-debugging-port") || line.contains("--enable-automation") || line.contains("--no-sandbox"))) {
                     String processId = extractProcessId(line, isWindows);
                     if (processId != null) {
                         logger.info("Terminating process: " + processId);
