@@ -15,7 +15,7 @@ import java.util.List;
  * festzustellen, ob neue Prozesse gestartet wurden. Neue PIDs werden gespeichert und Prozesse,
  * die nicht in der ursprünglichen Liste enthalten waren, werden terminiert.
  */
-public class ChromeProcess {
+public class ChromeProcessHandlerWindows {
     public static void main(String[] args) {
         List<String> initialPids = getChromePids();
         // Hier kannst du weitere Aktionen ausführen, z.B. warten und dann erneut nach Chrome-PIDs suchen
