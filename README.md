@@ -21,6 +21,7 @@ The project is organized into the following directories:
                 - `panzergame`: A basic implementation of a tank game.
             - `tutorials`: These are educational codebases that serve as tutorials.
                 - `calculator`: A simple calculator to demonstrate basic Java arithmetic operations.
+                - `database`: Contains utilities and helpers for database operations.
                 - `filelauncher`: Example showing how to launch external files and applications from Java.
                 - `greeter`: A basic program to greet users, showcasing command line interaction.
                 - `loadgeneratoripconfigurator`: Tools to generate load for testing and configuring IP settings.

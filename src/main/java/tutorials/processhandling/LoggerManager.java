@@ -3,32 +3,31 @@ package tutorials.processhandling;
 import java.util.logging.Logger;
 
 /**
- *  @author Intellon
- *  @date 16.05.2024
+ * @author Intellon
+ * @date 16.05.2024
  *
- * The LoggerManager class provides a centralized and singleton approach to managing logger instances
- * across the application. This class ensures that only one Logger instance is created and reused
- * throughout the application, which helps in maintaining a consistent logging strategy and reduces
- * resource overhead.
- *
- * By using a synchronized method to create and return the logger instance, the LoggerManager ensures
- * that the Logger is thread-safe and can be accessed by multiple threads concurrently without issues.
- *
- * Usage:
- * To get a Logger instance, call the getLogger method with the desired class as the argument.
- * Example:
- *     Logger logger = LoggerManager.getLogger(MyClass.class);
- *
- * This approach of managing loggers ensures that the logging configuration is centralized, and any
- * changes to logging behaviors need to be made in a single place, making maintenance and updates easier.
+ * A manager class for handling {@link Logger} instances.
+ * This class provides a mechanism to obtain a {@link Logger} for a specific class.
  */
 public class LoggerManager {
-    private static Logger logger = null;
+    private Logger logger;
 
-    public static synchronized Logger getLogger(Class<?> cls) {
-        if (logger == null) {
-            logger = Logger.getLogger(cls.getName());
-        }
+    /**
+     * Constructs a {@link LoggerManager} for the specified class.
+     * Initializes the logger for the provided class.
+     *
+     * @param cls the class for which the logger is to be created
+     */
+    public LoggerManager(Class<?> cls) {
+        this.logger = Logger.getLogger(cls.getName());
+    }
+
+    /**
+     * Returns the {@link Logger} instance associated with this {@link LoggerManager}.
+     *
+     * @return the {@link Logger} instance
+     */
+    public synchronized Logger getLogger() {
         return logger;
     }
 }
