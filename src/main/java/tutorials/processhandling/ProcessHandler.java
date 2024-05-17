@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.logging.Logger;
 
 /**
- *  @author Intellon
- *  @date 16.05.2024
+ * @author Intellon
+ * @date 16.05.2024
  *
  * The ProcessHandler class provides methods for scanning, analyzing, and terminating processes
  * based on command-line arguments. This class is utilized by specific ProcessHandler implementations
@@ -15,15 +15,35 @@ import java.util.logging.Logger;
  * by adapting the command line syntax accordingly.
  */
 public class ProcessHandler {
-    private final Logger logger;
+    private final IProcessBuilderFactory processBuilderFactory;
+    private static final LoggerManager loggerManager = new LoggerManager(ProcessHandler.class);
+    private static final Logger logger = loggerManager.getLogger();
 
-    public ProcessHandler(Logger logger) {
-        this.logger = logger;
+    /**
+     * Constructs a {@link ProcessHandler} with the default {@link IProcessBuilderFactory} implementation.
+     */
+    public ProcessHandler() {
+        this(new DefaultProcessBuilderFactory());
     }
 
+    /**
+     * Constructs a {@link ProcessHandler} with the specified {@link IProcessBuilderFactory}.
+     *
+     * @param processBuilderFactory the factory used to create {@link ProcessBuilder} instances
+     */
+    public ProcessHandler(IProcessBuilderFactory processBuilderFactory) {
+        this.processBuilderFactory = processBuilderFactory;
+    }
+
+    /**
+     * Executes a process scan using the specified command and terminates specific processes based on criteria.
+     *
+     * @param command   the command to execute for scanning processes
+     * @param isWindows a flag indicating if the operating system is Windows
+     */
     public void executeProcessScan(String command, boolean isWindows) {
         try {
-            ProcessBuilder builder = new ProcessBuilder(command.split(" "));
+            ProcessBuilder builder = processBuilderFactory.createProcessBuilder(command.split(" "));
             builder.redirectErrorStream(true);
             Process process = builder.start();
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -42,12 +62,25 @@ public class ProcessHandler {
         }
     }
 
-    private String extractProcessId(String line, boolean isWindows) {
+    /**
+     * Extracts the process ID from the provided line of process information.
+     *
+     * @param line      the line of process information
+     * @param isWindows a flag indicating if the operating system is Windows
+     * @return the extracted process ID, or null if it could not be determined
+     */
+    protected String extractProcessId(String line, boolean isWindows) {
         String[] parts = line.trim().split("\\s+");
         return isWindows ? parts[parts.length - 1] : parts[1]; // Process ID is last on Windows, second on Unix
     }
 
-    private void terminateProcess(String processId, boolean isWindows) {
+    /**
+     * Terminates the process with the specified process ID.
+     *
+     * @param processId the ID of the process to terminate
+     * @param isWindows a flag indicating if the operating system is Windows
+     */
+    protected void terminateProcess(String processId, boolean isWindows) {
         try {
             String[] cmd = isWindows ? new String[]{"cmd.exe", "/c", "taskkill", "/F", "/PID", processId}
                     : new String[]{"kill", "-9", processId};

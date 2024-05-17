@@ -9,6 +9,11 @@ package tutorials.processhandling;
  * for different operating systems. Each specific implementation must implement
  * this interface and define the execute method accordingly.
  */
-interface IProcessHandler {
+public interface IProcessHandler {
+
+    /**
+     * Executes a process. The specific implementation should define
+     * the steps and logic required to execute the process.
+     */
     void execute();
 }
