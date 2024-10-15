@@ -31,6 +31,11 @@ The project is organized into the following directories:
                 - `StartSquares`: Demonstrates mathematical functions to calculate squares of numbers.
                 - `StartWhatsYourNumber`: Interactive game to guess numbers.
                 - `base64converter`: A standalone application to encode and decode strings using Base64.
+        - `resources`: Assets and additional non-code files used in projects.
+            - `games.minesweeper`: Visual assets and other resources for the Minesweeper game.
+            - `games.panzergame.images`: Assets and resources used in the tank game.
+            - `tutorial.filelauncher.batch`: A batch script used within file launcher tutorials.
+            - `tutorial.filelauncher.logs`: Log files demonstrating logging capabilities within Java applications.
 
 ## Usage
 
